@@ -37,13 +37,13 @@ class ViewController: UIViewController {
     var numberTimeCount: Int = 0
     
     //  ランダムな数（答え）を変数で定義
-    var answerNum: Int = Int.random(in: 0...100)
+    var answerNum: Int = Int.random(in: 1...100)
     
     
     //   正解を更新する関数を作成する
     
     func resetRandNum() {
-        answerNum = Int.random(in: 0...100)
+        answerNum = Int.random(in: 1...100)
     }
     
     
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         
         
         // もし１から１００の間で
-        if 0 < writtingNum && writtingNum <= 100{
+        if 1 < writtingNum && writtingNum <= 100{
             
             // 入力数値　＞　正解数値
             if writtingNum > answerNum {
@@ -89,10 +89,10 @@ class ViewController: UIViewController {
                 // 入力数　＜　正解数値より高い場合
             } else if writtingNum < answerNum  {
                 
-                //  答えをに足していくよん
+                //  答えをに足していくよ
                 numberTimeCount += 1
                 
-                // ラベルに入力したの数を入れるよん
+                // ラベルに入力したの数を入れるよ
                 answerLabel.text = "\(writtingNum)"
                 
                 // 不正解アラートを表示するよん
